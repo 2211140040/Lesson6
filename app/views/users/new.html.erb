@@ -1,11 +1,17 @@
+<h1>新規ユーザー登録</h1>
+
 <%= form_with model: @user do |f| %>
   <p>
-    <%= f.label :uid, 'UID' %>
+    <%= f.label :uid, 'ユーザーID' %>
     <%= f.text_field :uid %>
   </p>
   <p>
-    <%= f.label :pass, 'PASS' %>
-    <%= f.text_field :pass %>
+    <%= f.label :password, 'パスワード' %>
+    <%= f.text_field :password %>
   </p>
+  <p>
+    <%= f.label :password_confirmation, 'パスワード(確認)' %>
+    <%= f.text_field :password_confirmation %>
+</p>
   <%= f.submit '登録' %>
 <% end %>
